@@ -1,0 +1,11 @@
+# accoding to short term plasticity model in SOM of Synaptic Theory of Working Memory
+E' = (-E + alpha*ln(1 + exp((J*u*x*E + E0)/alpha)))/tau
+#u' = (U0 - u)/tauF + U0*(1 - u)*E
+x' = (1 - x)/tauD - u*x*E
+par tau=0.013,alpha=1.5,J=4,E0=-2.3,tauD=0.2
+#par tauF=1.5,U0=0.3
+par u=0.4
+init E=0,x=0.5
+
+@ total=10, dt=0.0001
+done

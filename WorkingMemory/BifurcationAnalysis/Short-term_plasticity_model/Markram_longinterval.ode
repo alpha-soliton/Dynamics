@@ -1,0 +1,13 @@
+# .ode
+#f(u)=a*log10(1+exp(u/a))
+f(u)=a*ln(1+exp(u/a))
+E'=(-E+f(J*u*x*E+E0))/t_
+u'=(U_-u)/tf+U_*(1-u)*E
+x'=(1-x)/td-u*x*E
+
+par a=1.5, J=100, E0=-6, t_=1, tf=150, td=20, U_=0.3
+init u=0.8
+
+@ total=100, meth=RK, dt=.0001
+done
+

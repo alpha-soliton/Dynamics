@@ -1,0 +1,8 @@
+h(x) = 1.042961 + 1.634727 * cos(x) +1.508623 * cos(2*x) - 0.009672063 * sin(x) + 0.1288645 * sin(2*x)
+th1' = w1 + a*h(th2-th1)
+th2' = w2 + a*h(th1-th2)
+par w1=1,w2=1,a=.1
+@ total=100
+@ fold=th1,fold=th2
+@ xlo=0,ylo=0,xhi=5.83,yhi=5.83,xp=th1,yp=th2
+done
